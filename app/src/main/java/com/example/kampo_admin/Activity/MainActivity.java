@@ -1,8 +1,10 @@
-package com.example.kampo_admin;
+package com.example.kampo_admin.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.kampo_admin.R;
 
 public class MainActivity extends AppCompatActivity {
 
