@@ -7,6 +7,7 @@
     tools:context=".Activity.RegistrationActivity">
 
     <FrameLayout
+        android:id="@+id/registrationContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
