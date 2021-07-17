@@ -3,6 +3,7 @@ package com.example.kampo_admin.Fragments;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.text.TextUtils;
@@ -14,8 +15,8 @@ import android.widget.Toast;
 import com.example.kampo_admin.Activity.LoaderActivity;
 import com.example.kampo_admin.Activity.LoginActivity;
 import com.example.kampo_admin.Activity.MainActivity;
+
 import com.example.kampo_admin.databinding.FragmentRegistrationBinding;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -27,7 +28,7 @@ import java.util.Objects;
 
 
 public class RegistrationFragment extends Fragment {
-FragmentRegistrationBinding binding;
+    FragmentRegistrationBinding binding;
 //Creating Firebase Instance
     private final FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private final FirebaseFirestore fStore = FirebaseFirestore.getInstance();
@@ -36,7 +37,7 @@ FragmentRegistrationBinding binding;
       String userFullName,email,mobileNumber,specialization;
       String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
     binding=FragmentRegistrationBinding.inflate(inflater,container,false);
 
@@ -87,6 +88,7 @@ FragmentRegistrationBinding binding;
                     workers.put("Email",email);
                     workers.put("PhoneNumber",mobileNumber);
                     workers.put("Specialization",specialization);
+                    workers.put("WorkerId",mAuth.getUid());
                     documentReference.set(workers).addOnCompleteListener(unused -> updateUI(user));
                 }
                 else {
