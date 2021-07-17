@@ -7,6 +7,9 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+    buildFeatures{
+        viewBinding true
+    }
     defaultConfig {
         applicationId "com.example.kampo_admin"
         minSdkVersion 16
@@ -34,6 +37,7 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.airbnb.android:lottie:3.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
     implementation 'com.google.firebase:firebase-firestore:23.0.2'

@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/signUpButton"
         android:layout_width="225dp"
         android:layout_height="53dp"
         android:layout_marginStart="8dp"
@@ -40,7 +40,7 @@
         app:backgroundTint="@color/pink"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordText" />
 
     <TextView
         android:id="@+id/newUserText"
@@ -54,11 +54,11 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton"
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton"
         app:layout_constraintVertical_bias="0.121" />
 
     <TextView
-        android:id="@+id/registerLogin"
+        android:id="@+id/logInText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="92dp"
@@ -71,11 +71,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/newUserText"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton"
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton"
         app:layout_constraintVertical_bias="0.106" />
 
     <EditText
-        android:id="@+id/registerName"
+        android:id="@+id/fullNameText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/loginHeading" />
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/userEmailAddressText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -106,10 +106,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerName" />
+        app:layout_constraintTop_toBottomOf="@+id/fullNameText" />
 
     <EditText
-        android:id="@+id/registerPhn"
+        android:id="@+id/numberText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -123,10 +123,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
+        app:layout_constraintTop_toBottomOf="@+id/userEmailAddressText" />
 
     <EditText
-        android:id="@+id/registerSpecialist"
+        android:id="@+id/specialistText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -140,10 +140,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerPhn" />
+        app:layout_constraintTop_toBottomOf="@+id/numberText" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/loginPasswordText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -157,6 +157,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerSpecialist" />
+        app:layout_constraintTop_toBottomOf="@+id/specialistText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
