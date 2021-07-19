@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.WorkersProfileFragment">
+    tools:context=".Fragments.ProfileFragment">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
 
     <ImageView
@@ -60,12 +65,25 @@
         app:layout_constraintStart_toEndOf="@+id/cardView2"
         app:layout_constraintTop_toTopOf="@+id/profileImageThumbnail" />
 
+    <com.harrywhewell.scrolldatepicker.DayScrollDatePicker
+        android:id="@+id/day_date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/pink"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/curveBox">
+
+    </com.harrywhewell.scrolldatepicker.DayScrollDatePicker>
+
     <Button
-        android:id="@+id/bookMeButton"
+        android:id="@+id/editProfileButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/curve_button"
         android:text="Edit Profile"
@@ -73,6 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/curveBox" />
+        app:layout_constraintTop_toBottomOf="@+id/day_date_picker" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

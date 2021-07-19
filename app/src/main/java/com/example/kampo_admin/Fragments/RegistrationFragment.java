@@ -29,11 +29,11 @@ import java.util.Objects;
 
 public class RegistrationFragment extends Fragment {
     FragmentRegistrationBinding binding;
-//Creating Firebase Instance
+        //Creating Firebase Instance
     private final FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private final FirebaseFirestore fStore = FirebaseFirestore.getInstance();
 
-//    Creating Variable
+        //    Creating Variable
       String userFullName,email,mobileNumber,specialization;
       String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     @Override

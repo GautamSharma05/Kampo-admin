@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kampo_admin">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KampoAdmin">
-        <activity android:name=".Activity.LoaderActivity"/>
+        <activity android:name=".Activity.TrackerActivity"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBx35IcS3v4js8aoYv23d26MOkFQvCqv0A" />
+        <activity android:name=".Activity.LoaderActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.RegistrationActivity">
             <intent-filter>
@@ -18,9 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.MainActivity">
-
-        </activity>
+        <activity android:name=".Activity.MainActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"
